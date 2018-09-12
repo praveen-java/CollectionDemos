@@ -25,6 +25,7 @@ public class IteratorDemo {
 			//System.out.println(" Iteratered String is::"+itr.next());
 			if(remove.equals(itr.next()))
 				itr.remove();
+			
 		}
 		System.out.println("After Iteration..."+lst);
 	}

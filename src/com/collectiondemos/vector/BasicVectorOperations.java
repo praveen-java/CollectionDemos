@@ -1,5 +1,8 @@
 package com.collectiondemos.vector;
 
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.ListIterator;
 import java.util.Vector;
 
 public class BasicVectorOperations {
@@ -17,7 +20,24 @@ public class BasicVectorOperations {
 			System.out.println("Last element in the vector is :: "+vet.lastElement());
 			System.out.println("Is the vector empty ? "+vet.isEmpty());
 			
+			System.out.println("Iterating the vector using Iterator...  ");
 			
+			Iterator itr = vet.iterator();
+			while(itr.hasNext()) {
+				System.out.println(itr.next());
+			}
+			
+			System.out.println("Iterating the vector using ListIterator...  ");
+			ListIterator<String> li = vet.listIterator();
+			while(li.hasNext()) {
+				System.out.println(li.next());
+			}
+			
+			System.out.println("Iterating the vector using Enumerator...  ");
+			Enumeration<String> en = vet.elements();
+			while(en.hasMoreElements()) {
+				System.out.println(en.nextElement());
+			}
 	}
 
 }
